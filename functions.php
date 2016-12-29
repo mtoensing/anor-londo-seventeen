@@ -8,7 +8,7 @@ function my_theme_enqueue_styles() {
 
 function wpse15850_body_class( $wp_classes, $extra_classes )
 {
-    if(is_single() OR is_archive() OR is_page()) {
+    if(is_single()) {
 
         $blacklist = array('has-sidebar');
 
