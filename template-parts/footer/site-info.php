@@ -10,5 +10,5 @@
 
 ?>
 <div class="site-info">
-	<a href="<?php echo esc_url( __( get_bloginfo( 'url' ), 'twentyseventeen' ) ); ?>"><?php printf( __( 'A project by %s', 'twentyseventeen' ), get_bloginfo( 'name ') ); ?></a>
+	<a href="<?php echo esc_url( __( get_bloginfo( 'url' ), 'twentyseventeen' ) ); ?>"><?php printf( __( 'Ein Projekt von %s', 'twentyseventeen' ), get_bloginfo( 'name ') ); ?></a>
 </div><!-- .site-info -->

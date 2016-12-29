@@ -19,3 +19,12 @@
 .comment-metadata a.comment-edit-link {
     margin-left: 0em;
 }
+
+.entry-content .shortscore-hreview a {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+cite:before {
+    content: " — ";
+}
