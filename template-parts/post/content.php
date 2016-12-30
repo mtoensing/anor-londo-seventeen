@@ -50,7 +50,7 @@
 	<div class="entry-content">
 		<?php
 			/* translators: %s: Name of current post */
-			if(!is_home() && !is_archive()){
+			if(get_post_format() == "aside" || !is_home() && !is_archive()){
                 the_content( sprintf(
                     __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen' ),
                     get_the_title()

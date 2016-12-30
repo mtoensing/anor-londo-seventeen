@@ -20,11 +20,42 @@
     margin-left: 0em;
 }
 
-.entry-content .shortscore-hreview a {
-    box-shadow: none;
-    -webkit-box-shadow: none;
-}
-
 cite:before {
     content: " — ";
+}
+
+/* fix for dark theme and gallery */
+.colors-dark  button.pswp__button {
+    background-color: transparent;
+}
+
+
+@media screen and (min-width: 48em) {
+
+    /* Typography */
+
+    body,
+    button,
+    input,
+    select,
+    textarea {
+        font-size: 18px;
+        font-size: 1.1rem;
+
+    }
+
+}
+
+@media screen and (min-width: 30em) {
+
+    /* Typography */
+    body,
+    button,
+    input,
+    select,
+    textarea {
+        font-size: 20px;
+        font-size: 1.2rem;
+    }
+
 }
