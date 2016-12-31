@@ -12,27 +12,16 @@
  Text Domain:  twenty-seventeen-child
 */
 
-.comment-metadata time {
-    display: none;
-}
 
-.comment-metadata a.comment-edit-link {
-    margin-left: 0em;
-}
+
+/* 5.0 Typography */
 
 cite:before {
     content: " — ";
 }
 
-/* fix for dark theme and gallery */
-.colors-dark  button.pswp__button {
-    background-color: transparent;
-}
-
 
 @media screen and (min-width: 48em) {
-
-    /* Typography */
 
     body,
     button,
@@ -63,4 +52,66 @@ cite:before {
         font-size: 1.2rem;
     }
 
+}
+
+
+/* 14.0 Comments */
+
+.comment-body blockquote {
+    padding-bottom: 1px;
+    padding-left: 20px;
+    padding-top: 7px;
+    font-style: italic;
+    position: relative;
+    background: #eee;
+    margin: 0 0 1.5em;
+    font-size: 14px;
+    font-size: 0.875rem;
+}
+
+.comment-body blockquote:after {
+     position: absolute;
+     top: -19px;
+     left: -5px;
+     content: "“";
+     font-family: serif;
+     font-size: 46px;
+ }
+
+.comment-body blockquote p {
+    font-style: italic;
+    margin: 0;
+}
+
+/* 20.0 hacks */
+
+.comment-metadata time {
+    display: none;
+}
+
+.comment-metadata a.comment-edit-link {
+    margin-left: 0em;
+}
+
+.colors-dark  button.pswp__button {
+    background-color: transparent;
+}
+
+
+/* 21.0 Plugins */
+
+html .yarpp-related h3 {
+    font-weight: inherit;
+    padding: inherit;
+    font-size: inherit;
+    text-transform: inherit;
+    margin: inherit;
+}
+
+html .yarpp-related a {
+    font-weight: 300;
+}
+
+html span.comment-author-link {
+    font-style: italic;
 }
