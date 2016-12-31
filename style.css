@@ -44,6 +44,11 @@ cite:before {
 
     }
 
+    .single-post .entry-title, .page .entry-title {
+        font-size: 52px;
+        font-size: 3.25rem;
+    }
+
 }
 
 @media screen and (min-width: 30em) {
