@@ -77,7 +77,7 @@ function custom_comments( $comment, $depth, $args ) {
 }
 
 
-function anorlondo_adjust_content_width() {
+function anorlondo_content_width() {
 
     $content_width = 740;
 
@@ -87,6 +87,4 @@ function anorlondo_adjust_content_width() {
 
     $GLOBALS['content_width'] = apply_filters( 'twentyseventeen_content_width', $content_width );
 }
-add_action( 'template_redirect', 'anorlondo_adjust_content_width' );
-
-?>
+add_action( 'after_setup_theme', 'anorlondo_content_width', 1 );
