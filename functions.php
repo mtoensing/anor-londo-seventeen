@@ -75,3 +75,18 @@ function custom_comments( $comment, $depth, $args ) {
     </article><!-- .comment-body -->
     <?php
 }
+
+
+function anorlondo_adjust_content_width() {
+
+    $content_width = 740;
+
+    if ( twentyseventeen_is_frontpage() ) {
+        $content_width = 1120;
+    }
+
+    $GLOBALS['content_width'] = apply_filters( 'twentyseventeen_content_width', $content_width );
+}
+add_action( 'template_redirect', 'anorlondo_adjust_content_width' );
+
+?>
