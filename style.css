@@ -20,6 +20,30 @@ cite:before {
     content: " — ";
 }
 
+blockquote {
+    padding-bottom: 1px;
+    padding-left: 20px;
+    padding-top: 7px;
+    font-style: italic;
+    position: relative;
+    background: #eee;
+    margin: 0 0 1.5em;
+}
+
+blockquote:after {
+     position: absolute;
+     top: -19px;
+     left: -5px;
+     content: "“";
+     font-family: serif;
+     font-size: 46px;
+ }
+
+blockquote p {
+    font-style: italic;
+    margin: 0;
+}
+
 
 @media screen and (min-width: 48em) {
 
@@ -57,30 +81,9 @@ cite:before {
 
 /* 14.0 Comments */
 
-.comment-body blockquote {
-    padding-bottom: 1px;
-    padding-left: 20px;
-    padding-top: 7px;
-    font-style: italic;
-    position: relative;
-    background: #eee;
-    margin: 0 0 1.5em;
-    font-size: 14px;
-    font-size: 0.875rem;
-}
-
-.comment-body blockquote:after {
-     position: absolute;
-     top: -19px;
-     left: -5px;
-     content: "“";
-     font-family: serif;
-     font-size: 46px;
- }
-
-.comment-body blockquote p {
-    font-style: italic;
-    margin: 0;
+.commment-body blockquote {
+  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 /* 20.0 hacks */
@@ -114,4 +117,8 @@ html .yarpp-related a {
 
 html span.comment-author-link {
     font-style: italic;
+}
+
+.comment-subscription-form {
+    font-size: 80%;
 }
