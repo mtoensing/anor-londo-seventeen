@@ -20,20 +20,20 @@ cite:before {
 }
 
 blockquote {
-  padding-bottom: 0.5em;
-  padding-left: 30px;
-  padding-top: 0;
-  position: relative;
-  margin: 0 0 1.5em;
+    padding-bottom: 0.5em;
+    padding-left: 30px;
+    padding-top: 0;
+    position: relative;
+    margin: 0 0 1.5em;
 }
 
 blockquote:after {
-  position: absolute;
-  top: -17px;
-  left: 0px;
-  content: "“";
-  font-family: serif;
-  font-size: 46px;
+    position: absolute;
+    top: -17px;
+    left: 0px;
+    content: "“";
+    font-family: serif;
+    font-size: 46px;
 }
 
 blockquote p {
@@ -68,7 +68,6 @@ blockquote p {
     font-size: 0.875rem;
     background: #eee;
 }
-
 
 /* 20.0 hacks */
 
@@ -105,4 +104,28 @@ html span.comment-author-link {
 
 .comment-subscription-form {
     font-size: 80%;
+}
+
+/* 22.0 Widgets */
+
+.socialwidget {
+    background: #3B5998;
+    text-align: center;
+    padding: 1em;
+}
+
+.socialwidget a {
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    box-shadow: none !important;
+}
+
+.socialwidget a:hover {
+    color: #fff !important;
+    text-decoration: underline;
+}
+
+.socialwidget a:hover span {
+    text-decoration: none;
 }
