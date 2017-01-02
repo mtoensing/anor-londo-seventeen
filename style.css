@@ -13,7 +13,6 @@
 */
 
 
-
 /* 5.0 Typography */
 
 cite:before {
@@ -21,70 +20,55 @@ cite:before {
 }
 
 blockquote {
-    padding-bottom: 1px;
-    padding-left: 20px;
-    padding-top: 7px;
-    font-style: italic;
-    position: relative;
-    background: #eee;
-    margin: 0 0 1.5em;
+  padding-bottom: 0.5em;
+  padding-left: 30px;
+  padding-top: 0;
+  position: relative;
+  margin: 0 0 1.5em;
 }
 
 blockquote:after {
-     position: absolute;
-     top: -19px;
-     left: -5px;
-     content: "“";
-     font-family: serif;
-     font-size: 46px;
- }
+  position: absolute;
+  top: -17px;
+  left: 0px;
+  content: "“";
+  font-family: serif;
+  font-size: 46px;
+}
 
 blockquote p {
     font-style: italic;
     margin: 0;
 }
 
-
 @media screen and (min-width: 48em) {
-
-    body,
-    button,
-    input,
-    select,
-    textarea {
+    body, button, input, select, textarea {
         font-size: 18px;
         font-size: 1.1rem;
-
     }
-
     .single-post .entry-title, .page .entry-title {
         font-size: 52px;
         font-size: 3.25rem;
     }
-
 }
 
 @media screen and (min-width: 30em) {
-
     /* Typography */
-    body,
-    button,
-    input,
-    select,
-    textarea {
+    body, button, input, select, textarea {
         font-size: 20px;
         font-size: 1.2rem;
     }
-
 }
 
 
 /* 14.0 Comments */
 
-.commment-body blockquote {
-  font-size: 14px;
-  font-size: 0.875rem;
+.comment-content blockquote {
+    font-size: 14px;
+    font-size: 0.875rem;
+    background: #eee;
 }
+
 
 /* 20.0 hacks */
 
@@ -96,7 +80,7 @@ blockquote p {
     margin-left: 0em;
 }
 
-.colors-dark  button.pswp__button {
+.colors-dark button.pswp__button {
     background-color: transparent;
 }
 
