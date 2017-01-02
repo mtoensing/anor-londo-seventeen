@@ -26,8 +26,7 @@ get_header();
               'post_type' => 'post',
               'meta_key' => "_shortscore_user_rating",
               'orderby' => 'meta_value_num',
-              'posts_per_page' => '100',
-
+              'posts_per_page' => '200',
               'order' => 'DESC'
           );
 
