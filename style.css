@@ -50,10 +50,12 @@ blockquote p {
         font-size: 18px;
         font-size: 1.1rem;
     }
-    blockquote p {
-        font-size: 21px;
-        font-size: 1.3rem;
+    
+    .post blockquote p {
+        font-size: 22.4;
+        font-size: 1.4rem;
     }
+
     .single-post .entry-title, .page .entry-title {
         font-size: 48px;
         font-size: 3rem;
@@ -66,13 +68,9 @@ blockquote p {
         font-size: 20px;
         font-size: 1.4rem;
     }
-    blockquote p {
-        font-size: 26px;
-        font-size: 1.625rem;
-    }
 }
 
-.content-area ol li {
+.post ol li {
     margin-bottom: 1em;
 }
 

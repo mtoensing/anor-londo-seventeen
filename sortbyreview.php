@@ -35,7 +35,7 @@ get_header();
           while ($the_query->have_posts()) :
               $the_query->the_post();
                   echo '<li>';
-                  echo '<a href="' . get_permalink() . '">' . get_the_title() . ' - [' . get_post_meta( get_the_ID(), "_shortscore_user_rating", true ) . '/10]</a>';
+                  echo '<a href="' . get_permalink() . '">' . get_the_title() . '</a> - [' . get_post_meta( get_the_ID(), "_shortscore_user_rating", true ) . '/10]';
                   echo '</li>';
             endwhile;
     ?>
