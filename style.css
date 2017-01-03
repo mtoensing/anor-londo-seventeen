@@ -66,7 +66,7 @@ blockquote p {
     /* Typography */
     body, button, input, select, textarea {
         font-size: 20px;
-        font-size: 1.4rem;
+        font-size: 1.25rem;
     }
 }
 
