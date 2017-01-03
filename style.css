@@ -19,6 +19,10 @@ cite:before {
     content: " — ";
 }
 
+cite {
+  font-size: 70%;
+}
+
 blockquote {
     padding-bottom: 0.5em;
     padding-left: 30px;
@@ -46,17 +50,29 @@ blockquote p {
         font-size: 18px;
         font-size: 1.1rem;
     }
-    .single-post .entry-title, .page .entry-title {
-        font-size: 52px;
-        font-size: 3.25rem;
+
+    blockquote p {
+      font-size: 21px;
+      font-size: 1.3rem;
     }
+
+    .single-post .entry-title, .page .entry-title {
+        font-size: 48px;
+        font-size: 3rem;
+    }
+
 }
 
 @media screen and (min-width: 30em) {
     /* Typography */
     body, button, input, select, textarea {
         font-size: 20px;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
+    }
+
+    blockquote p {
+      font-size: 26px;
+      font-size: 1.625rem;
     }
 }
 
