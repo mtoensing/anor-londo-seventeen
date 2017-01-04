@@ -50,12 +50,10 @@ blockquote p {
         font-size: 18px;
         font-size: 1.1rem;
     }
-
     .post blockquote p {
         font-size: 22.4;
         font-size: 1.4rem;
     }
-
     .single-post .entry-title, .page .entry-title {
         font-size: 48px;
         font-size: 3rem;
@@ -83,21 +81,21 @@ blockquote p {
     background: #eee;
 }
 
-.comment-content a:focus,
-.comment-content a:hover {
-	color: #000;
-	-webkit-box-shadow: inset 0 0 0 rgba(0, 0, 0, 0), 0 3px 0 rgba(0, 0, 0, 1);
-	box-shadow: inset 0 0 0 rgba(0, 0, 0, 0), 0 3px 0 rgba(0, 0, 0, 1);
+.comment-content a:focus, .comment-content a:hover {
+    color: #000;
+    -webkit-box-shadow: inset 0 0 0 rgba(0, 0, 0, 0), 0 3px 0 rgba(0, 0, 0, 1);
+    box-shadow: inset 0 0 0 rgba(0, 0, 0, 0), 0 3px 0 rgba(0, 0, 0, 1);
 }
 
 .comment-content a {
-	-webkit-box-shadow: inset 0 -1px 0 rgba(15, 15, 15, 1);
-	box-shadow: inset 0 -1px 0 rgba(15, 15, 15, 1);
-	-webkit-transition: color 80ms ease-in, -webkit-box-shadow 130ms ease-in-out;
-	transition: color 80ms ease-in, -webkit-box-shadow 130ms ease-in-out;
-	transition: color 80ms ease-in, box-shadow 130ms ease-in-out;
-	transition: color 80ms ease-in, box-shadow 130ms ease-in-out, -webkit-box-shadow 130ms ease-in-out;
+    -webkit-box-shadow: inset 0 -1px 0 rgba(15, 15, 15, 1);
+    box-shadow: inset 0 -1px 0 rgba(15, 15, 15, 1);
+    -webkit-transition: color 80ms ease-in, -webkit-box-shadow 130ms ease-in-out;
+    transition: color 80ms ease-in, -webkit-box-shadow 130ms ease-in-out;
+    transition: color 80ms ease-in, box-shadow 130ms ease-in-out;
+    transition: color 80ms ease-in, box-shadow 130ms ease-in-out, -webkit-box-shadow 130ms ease-in-out;
 }
+
 
 /* 20.0 hacks */
 
@@ -128,7 +126,7 @@ html .yarpp-related a {
     font-weight: 300;
 }
 
-html span.comment-author-link {
+html span.on {
     font-style: italic;
 }
 
@@ -136,27 +134,83 @@ html span.comment-author-link {
     font-size: 80%;
 }
 
-
-/* 22.0 Widgets */
-
-.socialwidget {
-    background: #3B5998;
-    text-align: center;
-    padding: 1em;
+.shortscore-hreview a {
+    box-shadow: none !important;
+    text-decoration: none !important;
 }
 
-.socialwidget a {
+
+/* 22.0 widgets */
+
+
+/* 22.1 social button */
+
+.textwidget .socialbutton:first-child {
+  margin-bottom: 1.5em;
+}
+
+.socialbutton {
+    display: block;
+    background: #3B5998;
+    /* Facebook color */
+    text-align: center;
+    padding: 1em;
     color: #fff;
     text-decoration: none;
     border: none;
     box-shadow: none !important;
+    position: relative;
+    overflow: hidden;
 }
 
-.socialwidget a:hover {
+.socialbutton .dashicons {
+  margin-right: 5px;
+}
+
+.socialbutton:hover,
+.socialbutton:active,
+.socialbutton:focus {
     color: #fff !important;
     text-decoration: underline;
 }
 
-.socialwidget a:hover span {
+.socialbutton:hover::before {
+      transform: rotate(339deg);
+      font-size: 68px;
+}
+
+.socialbutton:hover span {
     text-decoration: none;
+}
+
+.socialbutton.twitter {
+    background: #1DA1F2;
+    /* Twitter color */
+}
+
+.socialbutton.twitter::before {
+    content: "\f301";
+    color: #0d85d2;
+}
+
+.socialbutton::before {
+    content: "\f305";
+    display: block;
+    width: 0;
+    height: 0;
+    font-size: 65px;
+    margin-left: -20px;
+    line-height: 0.9;
+    font-family: dashicons;
+    padding-right: 0.3em;
+    text-decoration: inherit;
+    font-weight: 400;
+    font-style: normal;
+    vertical-align: top;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #5d76ad;
+    transform: rotate(341deg);
+    transition: all .1s ease-in-out;
 }
