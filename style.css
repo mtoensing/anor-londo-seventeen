@@ -103,6 +103,12 @@ blockquote p {
     display: none;
 }
 
+.logged-in .comment-metadata time {
+    display: inline;
+}
+
+
+
 .comment-metadata a.comment-edit-link {
     margin-left: 0em;
 }
