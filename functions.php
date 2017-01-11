@@ -79,9 +79,12 @@ if(count($pages) <= 0){
           }
       }
     }
+
+    // remove duplicates 
     $pages = super_unique($pages, 'path');
 
     return $pages;
 }
+
 
 add_filter('gtc_pages_filter', 'gtc_pages_filter_automatically_remove_items');
