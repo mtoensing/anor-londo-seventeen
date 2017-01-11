@@ -55,7 +55,7 @@ function super_unique($array, $key)
 }
 
 
-function gtc_pages_filter_automatically_remove_items($pages)
+function gtc_pages_filter_remove_duplicated_items($pages)
 {
     $strings_to_exclude = array(
     '/amp/',
@@ -80,11 +80,11 @@ if(count($pages) <= 0){
       }
     }
 
-    // remove duplicates 
+    // remove duplicates
     $pages = super_unique($pages, 'path');
 
     return $pages;
 }
 
 
-add_filter('gtc_pages_filter', 'gtc_pages_filter_automatically_remove_items');
+add_filter('gtc_pages_filter', 'gtc_pages_filter_remove_duplicated_items');
