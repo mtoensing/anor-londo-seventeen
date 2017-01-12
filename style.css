@@ -145,6 +145,10 @@ html span.on {
     text-decoration: none !important;
 }
 
+.gtc-list li {
+    padding-bottom: 0.5em;
+}
+
 
 /* 22.0 widgets */
 
