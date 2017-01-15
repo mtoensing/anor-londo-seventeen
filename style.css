@@ -12,7 +12,6 @@
  Text Domain:  twenty-seventeen-child
 */
 
-
 /* 5.0 Typography */
 
 cite:before {
@@ -50,10 +49,12 @@ blockquote p {
         font-size: 18px;
         font-size: 1.1rem;
     }
+
     .post blockquote p {
         font-size: 22.4;
         font-size: 1.4rem;
     }
+
     .single-post .entry-title, .page .entry-title {
         font-size: 48px;
         font-size: 3rem;
@@ -71,7 +72,6 @@ blockquote p {
 .post ol li {
     margin-bottom: 1em;
 }
-
 
 /* 14.0 Comments */
 
@@ -96,7 +96,6 @@ blockquote p {
     transition: color 80ms ease-in, box-shadow 130ms ease-in-out, -webkit-box-shadow 130ms ease-in-out;
 }
 
-
 /* 20.0 hacks */
 
 .comment-metadata time {
@@ -107,8 +106,6 @@ blockquote p {
     display: inline;
 }
 
-
-
 .comment-metadata a.comment-edit-link {
     margin-left: 0em;
 }
@@ -116,7 +113,6 @@ blockquote p {
 .colors-dark button.pswp__button {
     background-color: transparent;
 }
-
 
 /* 21.0 Plugins */
 
@@ -149,14 +145,12 @@ html span.on {
     padding-bottom: 0.5em;
 }
 
-
 /* 22.0 widgets */
-
 
 /* 22.1 social button */
 
 .textwidget .socialbutton:first-child {
-  margin-bottom: 1.5em;
+    margin-bottom: 1.5em;
 }
 
 .socialbutton {
@@ -174,7 +168,7 @@ html span.on {
 }
 
 .socialbutton .dashicons {
-  margin-right: 5px;
+    margin-right: 5px;
 }
 
 .socialbutton:hover,
@@ -185,8 +179,8 @@ html span.on {
 }
 
 .socialbutton:hover::before {
-      transform: rotate(339deg);
-      font-size: 68px;
+    transform: rotate(339deg);
+    font-size: 68px;
 }
 
 .socialbutton:hover span {
@@ -224,3 +218,24 @@ html span.on {
     transform: rotate(341deg);
     transition: all .1s ease-in-out;
 }
+
+/* 23.1 page full width */
+
+body:not(.has-sidebar):not(.page-one-column) .page-header,
+body.has-sidebar.error404 #primary .page-header,
+body.page-two-column:not(.archive) #primary .entry-header-full-width,
+body.page-two-column.archive:not(.has-sidebar) #primary .page-header {
+    display: block;
+    width: 100%;
+}
+
+.blog:not(.has-sidebar) #primary article,
+.archive:not(.page-one-column):not(.has-sidebar) #primary article,
+.search:not(.has-sidebar) #primary article,
+.error404:not(.has-sidebar) #primary .page-content,
+.error404.has-sidebar #primary .page-content,
+body.page-two-column:not(.archive) #primary .entry-content-full-width,
+body.page-two-column #comments {
+    display: block;
+    width: 100%;
+} 
