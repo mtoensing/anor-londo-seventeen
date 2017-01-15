@@ -220,22 +220,17 @@ html span.on {
 }
 
 /* 23.1 page full width */
-
-body:not(.has-sidebar):not(.page-one-column) .page-header,
-body.has-sidebar.error404 #primary .page-header,
-body.page-two-column:not(.archive) #primary .entry-header-full-width,
-body.page-two-column.archive:not(.has-sidebar) #primary .page-header {
+body.page-two-column:not(.archive) #primary .entry-header.full-width {
     display: block;
     width: 100%;
 }
 
-.blog:not(.has-sidebar) #primary article,
-.archive:not(.page-one-column):not(.has-sidebar) #primary article,
-.search:not(.has-sidebar) #primary article,
-.error404:not(.has-sidebar) #primary .page-content,
-.error404.has-sidebar #primary .page-content,
-body.page-two-column:not(.archive) #primary .entry-content-full-width,
-body.page-two-column #comments {
+body.page-two-column:not(.archive) #primary .entry-content.full-width {
     display: block;
     width: 100%;
-} 
+}
+
+body.page:not(.twentyseventeen-front-page) .entry-header.full-width .entry-title {
+    font-size: 48px;
+    font-size: 3rem;
+}
