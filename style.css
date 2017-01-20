@@ -234,3 +234,28 @@ body.page:not(.twentyseventeen-front-page) .entry-header.full-width .entry-title
     font-size: 48px;
     font-size: 3rem;
 }
+
+
+/* type game */
+
+.home .type-game header.entry-header,
+.archive .type-game header.entry-header {
+    padding-left: 1em;
+    display: table-cell;
+    width: auto;
+}
+
+
+
+.home .type-game .post-thumbnail,
+.archive .type-game .post-thumbnail {
+    float: left;
+    display: table-cell;
+}
+
+
+.home .type-game header .entry-title a,
+.archive .type-game header .entry-title a {
+    margin-left: 0;
+}
+

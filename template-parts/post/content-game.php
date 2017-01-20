@@ -18,6 +18,15 @@
             echo twentyseventeen_get_svg(array( 'icon' => 'thumb-tack' ));
         endif;
     ?>
+
+    <?php if ('' !== get_the_post_thumbnail() && ! is_single()) : ?>
+        <div class="post-thumbnail">
+            <a href="<?php the_permalink(); ?>">
+                <?php the_post_thumbnail('thumbnail'); ?>
+            </a>
+        </div><!-- .post-thumbnail -->
+    <?php endif; ?>
+
 	<header class="entry-header">
 		<?php
             if ('post' === get_post_type()) :
@@ -38,14 +47,6 @@
             }
         ?>
 	</header><!-- .entry-header -->
-
-	<?php if ('' !== get_the_post_thumbnail() && ! is_single()) : ?>
-		<div class="post-thumbnail">
-			<a href="<?php the_permalink(); ?>">
-				<?php the_post_thumbnail('twentyseventeen-featured-image'); ?>
-			</a>
-		</div><!-- .post-thumbnail -->
-	<?php endif; ?>
 
 	<div class="entry-content">
 		<?php

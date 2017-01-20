@@ -42,8 +42,11 @@ get_header(); ?>
 					 * If you want to override this in a child theme, then include a file
 					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 					 */
-					get_template_part( 'template-parts/post/content', get_post_format() );
-
+					if ( get_post_type() == 'game' ) {
+	 			 		get_template_part( 'template-parts/post/content-game', get_post_format() );
+					} else {
+					 get_template_part( 'template-parts/post/content', get_post_format() );
+				 }
 				endwhile;
 
 				the_posts_pagination( array(
