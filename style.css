@@ -6,7 +6,7 @@
  Author:            MarcDK
  Author URI:        http://marc.tv
  Template:          twentyseventeen
- Version:           1.1.0
+ Version:           1.1.1
  License:           GNU General Public License v2 or later
  License URI:       http://www.gnu.org/licenses/gpl-2.0.html
  Tags:              light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
@@ -236,9 +236,7 @@ body.page:not(.twentyseventeen-front-page) .entry-header.full-width .entry-title
     font-size: 3rem;
 }
 
-
-/* type game */
-
+/* post type "game" */
 .home .type-game header.entry-header,
 .archive .type-game header.entry-header {
     padding-left: 1em;
@@ -246,14 +244,11 @@ body.page:not(.twentyseventeen-front-page) .entry-header.full-width .entry-title
     width: auto;
 }
 
-
-
 .home .type-game .post-thumbnail,
 .archive .type-game .post-thumbnail {
     float: left;
     display: table-cell;
 }
-
 
 .home .type-game header .entry-title a,
 .archive .type-game header .entry-title a {
