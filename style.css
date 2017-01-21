@@ -1,15 +1,16 @@
 /*
- Theme Name:   Anor Londo
- Theme URI:    http://darksouls.wikidot.com/anor-londo
- Description:  Based on Twenty Seventeen Theme
- Author:       MarcDK
- Author URI:   http://marc.tv
- Template:     twentyseventeen
- Version:      1.0.0
- License:      GNU General Public License v2 or later
- License URI:  http://www.gnu.org/licenses/gpl-2.0.html
- Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
- Text Domain:  twenty-seventeen-child
+ Theme Name:        Anor Londo
+ Theme URI:         https://marc.tv/weniger-code-ist-mehr/
+ GitHub Theme URI:  mtoensing/anor-londo-seventeen
+ Description:       Based on Twenty Seventeen Theme
+ Author:            MarcDK
+ Author URI:        http://marc.tv
+ Template:          twentyseventeen
+ Version:           1.0.0
+ License:           GNU General Public License v2 or later
+ License URI:       http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:              light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:       twenty-seventeen-child
 */
 
 /* 5.0 Typography */
@@ -258,4 +259,3 @@ body.page:not(.twentyseventeen-front-page) .entry-header.full-width .entry-title
 .archive .type-game header .entry-title a {
     margin-left: 0;
 }
-
