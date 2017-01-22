@@ -38,3 +38,5 @@ function anorlondo_content_width()
 }
 
 add_action('after_setup_theme', 'anorlondo_content_width', 1);
+
+add_filter( 'auto_update_theme', '__return_true' );
