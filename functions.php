@@ -1,4 +1,7 @@
 <?php
+
+add_filter( 'auto_update_theme', '__return_true' );
+
 add_action('wp_enqueue_scripts', 'my_theme_enqueue_styles');
 
 function my_theme_enqueue_styles()
@@ -35,8 +38,23 @@ function anorlondo_content_width()
     }
 
     $GLOBALS['content_width'] = apply_filters('twentyseventeen_content_width', $content_width);
+
 }
 
-add_action('after_setup_theme', 'anorlondo_content_width', 1);
+add_action('after_setup_theme', 'anorlondo_content_width', 100);
 
-add_filter( 'auto_update_theme', '__return_true' );
+/* new widget area */
+function anorlondo_widgets_init() {
+
+	register_sidebar( array(
+		'name'          => __( 'Header', 'twentyseventeen' ),
+		'id'            => 'sidebar-4',
+		'description'   => __( 'Add widgets here to appear in your header.', 'twentyseventeen' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+}
+add_action( 'widgets_init', 'anorlondo_widgets_init' );

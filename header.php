@@ -57,5 +57,18 @@
 	endif;
 	?>
 
+	<?php if ( is_active_sidebar( 'sidebar-4' ) ) : ?>
+		<div class="wrap">
+		<aside class="widget-area" role="complementary">
+			<?php
+			if ( is_active_sidebar( 'sidebar-4' ) ) { ?>
+				<div class="widget-column header-widget">
+					<?php dynamic_sidebar( 'sidebar-4' ); ?>
+				</div>
+			<?php } ?>
+		</aside><!-- .widget-area -->
+		</div>
+	<?php endif; ?>
+
 	<div class="site-content-contain">
 		<div id="content" class="site-content">

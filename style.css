@@ -6,7 +6,7 @@
  Author:            MarcDK
  Author URI:        http://marc.tv
  Template:          twentyseventeen
- Version:           1.1.2
+ Version:           1.1.3
  License:           GNU General Public License v2 or later
  License URI:       http://www.gnu.org/licenses/gpl-2.0.html
  Tags:              light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
@@ -221,6 +221,13 @@ html span.on {
 }
 
 /* 23.1 page full width */
+
+.page-template-page-full-width #primary {
+  max-width: 740px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 body.page-two-column:not(.archive) #primary .entry-header.full-width {
     display: block;
     width: 100%;
@@ -232,11 +239,13 @@ body.page-two-column:not(.archive) #primary .entry-content.full-width {
 }
 
 body.page:not(.twentyseventeen-front-page) .entry-header.full-width .entry-title {
-    font-size: 48px;
-    font-size: 3rem;
+    font-size: 44px;
+    font-size: 2.8rem;
 }
 
-/* post type "game" */
+
+/* type game */
+
 .home .type-game header.entry-header,
 .archive .type-game header.entry-header {
     padding-left: 1em;
@@ -244,13 +253,32 @@ body.page:not(.twentyseventeen-front-page) .entry-header.full-width .entry-title
     width: auto;
 }
 
+
+
 .home .type-game .post-thumbnail,
 .archive .type-game .post-thumbnail {
     float: left;
     display: table-cell;
 }
 
+
 .home .type-game header .entry-title a,
 .archive .type-game header .entry-title a {
     margin-left: 0;
+}
+
+/* wpsearch ajax plugin */
+
+.colors-dark .searchwp-live-search-results {
+  background: #262626;
+}
+
+.colors-dark .searchwp-live-search-result {
+    border-bottom: 1px solid #333;
+}
+
+/* header widget area */
+
+.widget-column.header-widget {
+    padding-top: 1em;
 }
