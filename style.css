@@ -56,10 +56,13 @@ blockquote p {
         font-size: 1.4rem;
     }
 
-    .single-post .entry-title, .page .entry-title {
+    .single-post .entry-title,
+    html body.page .entry-title {
         font-size: 48px;
         font-size: 3rem;
+        font-weight: 300;
     }
+
 }
 
 @media screen and (min-width: 30em) {
@@ -221,6 +224,18 @@ html span.on {
 }
 
 /* 23.1 page full width */
+
+.page .panel-content .entry-title,
+.page-title,
+body.page:not(.twentyseventeen-front-page) .entry-title {
+    color: #333;
+    font-size: 48px;
+    font-size: 3rem;
+    font-weight: 300;
+    letter-spacing: normal;
+    text-transform: inherit;
+}
+
 
 body.page #primary {
   max-width: 740px;
