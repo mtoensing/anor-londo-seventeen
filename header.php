@@ -40,6 +40,19 @@
 
 	</header><!-- #masthead -->
 
+    <?php if ( is_active_sidebar( 'sidebar-4' ) ) : ?>
+        <div class="wrap">
+            <aside class="widget-area" role="complementary">
+                <?php
+                if ( is_active_sidebar( 'sidebar-4' ) ) { ?>
+                    <div class="widget-column header-widget">
+                        <?php dynamic_sidebar( 'sidebar-4' ); ?>
+                    </div>
+                <?php } ?>
+            </aside><!-- .widget-area -->
+        </div>
+    <?php endif; ?>
+
 	<?php
 	// If a regular post or page, and not the front page, show the featured image.
 	if ( has_post_thumbnail() && ( is_single() || ( is_page() && ! twentyseventeen_is_frontpage() ) ) ) :
@@ -57,18 +70,6 @@
 	endif;
 	?>
 
-	<?php if ( is_active_sidebar( 'sidebar-4' ) ) : ?>
-		<div class="wrap">
-		<aside class="widget-area" role="complementary">
-			<?php
-			if ( is_active_sidebar( 'sidebar-4' ) ) { ?>
-				<div class="widget-column header-widget">
-					<?php dynamic_sidebar( 'sidebar-4' ); ?>
-				</div>
-			<?php } ?>
-		</aside><!-- .widget-area -->
-		</div>
-	<?php endif; ?>
 
 	<div class="site-content-contain">
 		<div id="content" class="site-content">
