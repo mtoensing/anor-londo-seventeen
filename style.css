@@ -275,3 +275,18 @@ body.page:not(.twentyseventeen-front-page) .entry-title {
 .widget-column.header-widget {
     padding-top: 1em;
 }
+
+/* amazon link */
+a[href*='=087022']:before {
+     content: "\f174";
+     display: inline-block;
+     width: 1em;
+     font-family: dashicons;
+     text-decoration: inherit;
+     font-weight: 400;
+     font-style: normal;
+     -webkit-transition: color 0.2s ease-in 0;
+     transition: color 0.2s ease-in;
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
+}
