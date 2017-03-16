@@ -2,6 +2,12 @@
 
 add_filter( 'auto_update_theme', '__return_true' );
 
+add_action( 'after_setup_theme', 'anorlondo_theme_setup' );
+
+function anorlondo_theme_setup() {
+    add_image_size( 'article-retina', 1480 ); // 1480 pixels wide (and unlimited height)
+}
+
 add_action('wp_enqueue_scripts', 'my_theme_enqueue_styles');
 
 function my_theme_enqueue_styles()
