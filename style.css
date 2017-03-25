@@ -6,7 +6,7 @@
  Author:            MarcDK
  Author URI:        http://marc.tv
  Template:          twentyseventeen
- Version:           1.2.1
+ Version:           1.2.2
  License:           GNU General Public License v2 or later
  License URI:       http://www.gnu.org/licenses/gpl-2.0.html
  Tags:              light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
@@ -298,4 +298,13 @@ a[href*='/out/']:after {
 /* center media player */
 .wp-video {
   margin: 0 auto;
+}
+
+.wp-video .mejs-controls .mejs-time-rail .mejs-time-current {
+    background: #39619b;
+}
+
+/* gallery */
+.gallery .gallery-item {
+  padding: 0;
 }
