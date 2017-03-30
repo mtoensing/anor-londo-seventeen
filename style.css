@@ -45,8 +45,32 @@ blockquote p {
     margin: 0;
 }
 
+@media screen and (min-width: 100em) {
+  html body,
+  html button,
+  html input,
+  html select,
+  html textarea {
+    font-size: 23px;
+    font-size: 1.44rem;
+  }
+
+  .comment-body {
+    font-size: 19px;
+    font-size: 1.2rem;
+  }
+
+  .single-post:not(.has-sidebar) #primary, .page.page-one-column:not(.twentyseventeen-front-page) #primary, .archive.page-one-column:not(.has-sidebar) .page-header, .archive.page-one-column:not(.has-sidebar) #primary {
+    max-width: 960px;
+}
+}
+
 @media screen and (min-width: 48em) {
-    body, button, input, select, textarea {
+    body,
+    button,
+    input,
+    select,
+    textarea {
         font-size: 18px;
         font-size: 1.1rem;
     }
