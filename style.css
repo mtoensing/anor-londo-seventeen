@@ -312,3 +312,16 @@ a[href*='/out/']:after {
 .gallery .gallery-item {
   padding: 0;
 }
+
+/* center images */
+
+.wp-caption {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* hide home header */
+
+.home .page-header {
+    display:none;
+}
