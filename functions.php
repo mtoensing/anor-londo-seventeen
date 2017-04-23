@@ -65,3 +65,40 @@ function anorlondo_widgets_init() {
 
 }
 add_action( 'widgets_init', 'anorlondo_widgets_init' );
+
+function anorlondo_get_shortscore_list(){
+
+    $args = array(
+        'post_type' => 'post',
+        'meta_key' => "_shortscore_user_rating",
+        'orderby' => 'meta_value_num',
+        'posts_per_page' => '200',
+        'order' => 'DESC'
+    );
+
+    $the_query = new WP_Query($args);
+    $html = '';
+    $score = '';
+
+    while ($the_query->have_posts()) :
+        $the_query->the_post();
+        $result = get_post_meta( get_the_ID(), "_shortscore_result", true );
+        $title = $result->game->title;
+        $shortscore = get_post_meta( get_the_ID(), "_shortscore_user_rating", true );
+
+        if( $score != $shortscore ) {
+            if($score != '') {
+                $html .= "</ul> \n";
+            }
+            $html .= '<h2>SHORTSCORE ' . $shortscore . '/10</h2>';
+            $html .= '<ul>';
+        }
+        $html .= '<li>';
+        $html .= '[' . $shortscore . '/10] - <a href="' . get_permalink() . '">' .  $title . '</a>';
+        $html .= "</li> \n";
+
+        $score = $shortscore;
+    endwhile;
+
+    return $html;
+}
