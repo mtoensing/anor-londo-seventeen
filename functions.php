@@ -70,8 +70,10 @@ function anorlondo_get_shortscore_list(){
 
     $args = array(
         'post_type' => 'post',
-        'meta_key' => "_shortscore_user_rating",
+
         'orderby' => 'meta_value_num',
+        'orderby'  => array( 'meta_value_num' => 'DESC', 'date' => 'DESC' ),
+        'meta_key' => '_shortscore_user_rating',
         'posts_per_page' => '200',
         'order' => 'DESC'
     );
