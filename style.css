@@ -144,11 +144,6 @@ html span.on {
     font-size: 80%;
 }
 
-.shortscore-hreview a {
-    box-shadow: none !important;
-    text-decoration: none !important;
-}
-
 .gtc-list li {
     padding-bottom: 0.5em;
 }
@@ -324,4 +319,25 @@ a[href*='/out/']:after {
 
 .home .page-header {
     display:none;
+}
+
+
+/* SHORTSCORE */
+
+.shortscore-hreview a {
+    box-shadow: none !important;
+    text-decoration: none !important;
+}
+
+@media screen and (max-width: 50em) {
+
+    html .type-game .shortscore-hreview .text,
+    html .type-game .shortscore-hreview .rating,
+    html .type-game .shortscore-hreview .link {
+        float: none;
+    }
+    html .type-game .shortscore-hreview .link {
+        text-align: center;
+    }
+
 }
