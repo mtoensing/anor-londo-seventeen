@@ -6,7 +6,7 @@
  Author:            MarcDK
  Author URI:        http://marc.tv
  Template:          twentyseventeen
- Version:           1.7
+ Version:           1.7.1
  License:           GNU General Public License v2 or later
  License URI:       http://www.gnu.org/licenses/gpl-2.0.html
  Tags:              light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
@@ -235,7 +235,6 @@ body.page:not(.twentyseventeen-front-page) .entry-title {
     text-transform: inherit;
 }
 
-
 /* type game */
 
 .home .type-game header.entry-header,
@@ -245,14 +244,11 @@ body.page:not(.twentyseventeen-front-page) .entry-title {
     width: auto;
 }
 
-
-
 .home .type-game .post-thumbnail,
 .archive .type-game .post-thumbnail {
     float: left;
     display: table-cell;
 }
-
 
 .home .type-game header .entry-title a,
 .archive .type-game header .entry-title a {
@@ -262,7 +258,7 @@ body.page:not(.twentyseventeen-front-page) .entry-title {
 /* wpsearch ajax plugin */
 
 .colors-dark .searchwp-live-search-results {
-  background: #262626;
+    background: #262626;
 }
 
 .colors-dark .searchwp-live-search-result {
@@ -278,25 +274,25 @@ body.page:not(.twentyseventeen-front-page) .entry-title {
 /* links */
 a[href*='=087022']:after,
 a[href*='/out/']:after {
-  content: "\f504";
-  display: inline-block;
-  width: 1em;
-  font-family: dashicons;
-  font-size: 100%;
-  box-sizing: content-box;
-  text-decoration: inherit;
-  font-weight: 400;
-  vertical-align: top;
-  font-style: normal;
-  -webkit-transition: color 0.2s ease-in 0;
-  transition: color 0.2s ease-in;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    content: "\f504";
+    display: inline-block;
+    width: 1em;
+    font-family: dashicons;
+    font-size: 100%;
+    box-sizing: content-box;
+    text-decoration: inherit;
+    font-weight: 400;
+    vertical-align: top;
+    font-style: normal;
+    -webkit-transition: color 0.2s ease-in 0;
+    transition: color 0.2s ease-in;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 /* center media player */
 .wp-video {
-  margin: 0 auto;
+    margin: 0 auto;
 }
 
 .wp-video .mejs-controls .mejs-time-rail .mejs-time-current {
@@ -305,22 +301,32 @@ a[href*='/out/']:after {
 
 /* gallery */
 .gallery .gallery-item {
-  padding: 0;
+    padding: 0;
 }
 
 /* center images */
 
 .wp-caption {
-  margin-left: auto;
-  margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* hide home header */
 
 .home .page-header {
-    display:none;
+    display: none;
 }
 
+/* smaller main headline on smaller displays */
+
+@media screen and (max-width: 50em) {
+    html .page .panel-content .entry-title,
+    html .page-title,
+    html body.page:not(.twentyseventeen-front-page) .entry-title {
+        font-size: 32px;
+        font-size: 2rem;
+    }
+}
 
 /* SHORTSCORE */
 
@@ -336,6 +342,7 @@ a[href*='/out/']:after {
     html .type-game .shortscore-hreview .link {
         float: none;
     }
+
     html .type-game .shortscore-hreview .link {
         text-align: center;
     }
