@@ -255,6 +255,12 @@ body.page:not(.twentyseventeen-front-page) .entry-title {
     margin-left: 0;
 }
 
+.home .type-game.game,
+.archive .type-game.game {
+    padding-bottom: 1em;
+}
+
+
 /* wpsearch ajax plugin */
 
 .colors-dark .searchwp-live-search-results {
@@ -269,6 +275,10 @@ body.page:not(.twentyseventeen-front-page) .entry-title {
 
 .widget-column.header-widget {
     padding-top: 1em;
+}
+
+.widget-column.header-widget .widget_search {
+    padding-bottom: 0;
 }
 
 /* links */
