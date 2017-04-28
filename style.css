@@ -6,12 +6,15 @@
  Author:            MarcDK
  Author URI:        http://marc.tv
  Template:          twentyseventeen
- Version:           1.7.1
+ Version:           1.7.3
  License:           GNU General Public License v2 or later
  License URI:       http://www.gnu.org/licenses/gpl-2.0.html
  Tags:              light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
  Text Domain:       twenty-seventeen-child
 */
+
+
+/* */
 
 /* 5.0 Typography */
 
@@ -46,6 +49,11 @@ blockquote p {
 }
 
 @media screen and (min-width: 48em) {
+
+    html .site-content {
+        padding: 3.5em 0 0;
+    }
+
     body,
     button,
     input,
@@ -260,6 +268,11 @@ body.page:not(.twentyseventeen-front-page) .entry-title {
     padding-bottom: 1em;
 }
 
+/* Search */
+
+.page-template-searchform.page-one-column .entry-header.full-width {
+    display: none;
+}
 
 /* wpsearch ajax plugin */
 
@@ -278,7 +291,7 @@ body.page:not(.twentyseventeen-front-page) .entry-title {
 }
 
 .widget-column.header-widget .widget_search {
-    padding-bottom: 0;
+    padding-bottom: 1em;
 }
 
 /* links */
