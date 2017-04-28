@@ -371,3 +371,11 @@ a[href*='/out/']:after {
     }
 
 }
+
+/* Jetpack */
+
+html #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title a,
+html #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title a:hover,
+html #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title a:active {
+    text-decoration: none;
+}
