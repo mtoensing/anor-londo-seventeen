@@ -6,7 +6,7 @@
  Author:            MarcDK
  Author URI:        http://marc.tv
  Template:          twentyseventeen
- Version:           1.8.1
+ Version:           1.8.2
  License:           GNU General Public License v2 or later
  License URI:       http://www.gnu.org/licenses/gpl-2.0.html
  Tags:              light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
@@ -384,4 +384,11 @@ html #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedpo
 tfoot {
     border-top: 2px solid #040404;
     padding-bottom: 0.5em;
+}
+
+/* hide author on home, archives and category pages */
+
+.home .byline,
+.archive .byline {
+    display: none;
 }
