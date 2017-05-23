@@ -6,7 +6,7 @@ add_action( 'after_setup_theme', 'anorlondo_theme_setup' );
 
 function anorlondo_theme_setup() {
     add_image_size( 'article-retina', 1480 ); // 1480 pixels wide (and unlimited height)
-    add_image_size( 'thumbnail-retinag', 300, 300, true ); // retina thumbnail
+    add_image_size( 'thumbnail-retina', 300, 300, true ); // retina thumbnail
 }
 
 add_action('wp_enqueue_scripts', 'my_theme_enqueue_styles');
