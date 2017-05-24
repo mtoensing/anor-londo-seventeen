@@ -7,6 +7,8 @@ add_action( 'after_setup_theme', 'anorlondo_theme_setup' );
 function anorlondo_theme_setup() {
     add_image_size( 'article-retina', 1480 ); // 1480 pixels wide (and unlimited height)
     add_image_size( 'thumbnail-retina', 300, 300, true ); // retina thumbnail
+	add_image_size( 'yarpp', 231, 100, true ); // yarpp image
+	add_image_size( 'yarpp-retina', 462, 200, true ); // yarpp image
 }
 
 add_action('wp_enqueue_scripts', 'my_theme_enqueue_styles');
@@ -15,13 +17,6 @@ function my_theme_enqueue_styles()
 {
     wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
     wp_enqueue_style( 'dashicons' );
-	wp_enqueue_style(
-			"yarpp-template-thumbnails",
-			get_stylesheet_directory_uri() . "/yarpp-template.css",
-			false,
-			1.0
-	);
-
 }
 
 /* Add has-sidebar class to body tag on single pages */

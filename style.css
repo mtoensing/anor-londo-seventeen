@@ -6,7 +6,7 @@
  Author:            MarcDK
  Author URI:        http://marc.tv
  Template:          twentyseventeen
- Version:           2.0
+ Version:           2.1
  License:           GNU General Public License v2 or later
  License URI:       http://www.gnu.org/licenses/gpl-2.0.html
  Tags:              light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
@@ -131,17 +131,6 @@ blockquote p {
 
 /* 21.0 Plugins */
 
-html .yarpp-related h3 {
-    font-weight: inherit;
-    padding: inherit;
-    font-size: inherit;
-    text-transform: inherit;
-    margin: inherit;
-}
-
-html .yarpp-related a {
-    font-weight: 300;
-}
 
 html span.on {
     font-style: italic;
@@ -373,11 +362,13 @@ a[href*='/out/']:after {
 
 /* Jetpack */
 
-html #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title a,
-html #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title a:hover,
-html #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title a:active {
+html #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post a,
+html #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post a:hover,
+html #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post a:active {
     text-decoration: none;
+    box-shadow: none;
 }
+
 
 /* table */
 
