@@ -15,6 +15,13 @@ function my_theme_enqueue_styles()
 {
     wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
     wp_enqueue_style( 'dashicons' );
+	wp_enqueue_style(
+			"yarpp-template-thumbnails",
+			get_stylesheet_directory_uri() . "/yarpp-template.css",
+			false,
+			1.0
+	);
+
 }
 
 /* Add has-sidebar class to body tag on single pages */
