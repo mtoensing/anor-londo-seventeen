@@ -13,7 +13,7 @@ Author: Marc Tönsing
 			<?php while (have_posts()) : the_post(); ?>
 				<?php if (has_post_thumbnail()):?>
 
-					<?php $permalink = get_the_permalink().'?utm_source=related'; ?>
+					<?php $permalink = get_the_permalink(); ?>
 
                     <div class="jp-relatedposts-post jp-relatedposts-post<?php echo $i?> jp-relatedposts-post-thumbs">
                         <a class="jp-relatedposts-post-a" href="<?php echo $permalink; ?>" title="<?php the_title_attribute(); ?>" rel="nofollow" >
