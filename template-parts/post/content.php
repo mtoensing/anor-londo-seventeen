@@ -24,10 +24,12 @@
                 echo '<div class="entry-meta">';
                     if (is_single() OR is_home() OR is_archive() ) :
                         twentyseventeen_posted_on();
-                        twentyseventeen_edit_link();
+	                    echo ' - '; comments_popup_link();
+	                    twentyseventeen_edit_link();
                     else :
                         echo twentyseventeen_time_link();
-                        twentyseventeen_edit_link();
+	                    echo ' - '; comments_popup_link();
+	                    twentyseventeen_edit_link();
                     endif;
                 echo '</div><!-- .entry-meta -->';
             endif;
