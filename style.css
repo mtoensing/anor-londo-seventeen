@@ -6,7 +6,7 @@
  Author:            MarcDK
  Author URI:        http://marc.tv
  Template:          twentyseventeen
- Version:           2.5
+ Version:           2.6
  License:           GNU General Public License v2 or later
  License URI:       http://www.gnu.org/licenses/gpl-2.0.html
  Tags:              light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
@@ -45,6 +45,12 @@ blockquote:after {
 blockquote p {
     font-style: italic;
     margin: 0;
+}
+
+ul.nobullets,
+ol.nobullets {
+  margin-left: 0;
+  list-style: none;
 }
 
 @media screen and (min-width: 48em) {
