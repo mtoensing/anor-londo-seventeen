@@ -20,17 +20,13 @@
 	?>
 
 	<?php if ('' !== get_the_post_thumbnail() && ! is_single()) : ?>
-		<?php $thumb = get_the_post_thumbnail_url(get_the_ID(),'thumbnail'); ?>
-		<?php echo '<div class="post-thumbnail" style="background-image:url(' . $thumb . ');">'; ?>
-        <a href="<?php the_permalink(); ?>">
-			<?php $score = get_post_meta(get_the_ID(),'score_value',true); ?>
-			<?php  if($score != ''){
-				echo '<div class="shortscore shortscore-' . $score . '" id="rangeslider_output">' . $score . '</div>';
-			} else {
-				echo '<div class="shortscore shortscore-0" id="rangeslider_output">?</div>';
-			}
-			?>
+		<?php
+		$thumb = get_the_post_thumbnail_url(get_the_ID(),'thumbnail');
+		echo '<div class="post-thumbnail" style="background-image:url(' . $thumb . ');">';
+		?>
 
+        <a href="<?php the_permalink(); ?>">
+			<?php echo get_Shortscore(); ?>
         </a>
         </div><!-- .post-thumbnail -->
 	<?php endif; ?>

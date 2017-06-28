@@ -35,6 +35,32 @@ function wpse15850_body_class($wp_classes, $extra_classes)
 }
 
 
+function get_Shortscore() {
+
+	$id = get_the_ID();
+
+	$score_count = get_post_meta($id, 'score_count', true);
+
+	$markup = '';
+
+	if ($score_count > 0) {
+
+		$shortscore = get_post_meta($id, 'score_value', true);
+
+		$score_int = floor($shortscore);
+
+		$markup .= '<div class="average shortscore shortscore-' . $score_int . '">' . $shortscore . '</div>';
+
+	} else {
+		$markup .= '<div class="shortscore shortscore-0">?</div>';
+
+	}
+
+	return $markup;
+
+}
+
+
 add_filter('body_class', 'wpse15850_body_class', 100, 2);
 
 /* set content width to 740 (image width) */
