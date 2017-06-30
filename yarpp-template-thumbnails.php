@@ -12,12 +12,19 @@ Author: Marc Tönsing
 			<?php $i = 0; ?>
 			<?php while (have_posts()) : the_post(); ?>
 				<?php if (has_post_thumbnail()):?>
+					<?php
+                    $size = "yarpp";
+                    $size_retina = "yarpp-retina";
 
+                    if ( get_post_type() == 'game' ) {
+                        $size = 'thumbnail';
+	                    $size_retina = 'thumbnail';
+                    }
+                    ?>
 					<?php $permalink = get_the_permalink(); ?>
-
                     <div class="jp-relatedposts-post jp-relatedposts-post<?php echo $i?> jp-relatedposts-post-thumbs">
                         <a class="jp-relatedposts-post-a" href="<?php echo $permalink; ?>" title="<?php the_title_attribute(); ?>" rel="nofollow" >
-                            <img class="unveil" data-src="<?php the_post_thumbnail_url( 'yarpp' ); ?>" data-src-retina="<?php the_post_thumbnail_url( 'yarpp-retina' ); ?>">
+                        <img class="unveil" data-src="<?php the_post_thumbnail_url( $size ); ?>" data-src-retina="<?php the_post_thumbnail_url( $size_retina ); ?>">
                         </a>
                         <h4 class="jp-relatedposts-post-title">
                             <a class="jp-relatedposts-post-a" href="<?php echo $permalink; ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
