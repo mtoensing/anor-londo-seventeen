@@ -6,8 +6,8 @@ add_action( 'after_setup_theme', 'anorlondo_theme_setup' );
 
 function anorlondo_theme_setup() {
     add_image_size( 'article-retina', 1480 ); // 1480 pixels wide (and unlimited height)
-    add_image_size( 'square-game', 240, 240, true ); // game
-	add_image_size( 'square-game-retina', 480, 480, true ); // game retina
+    add_image_size( 'featured-game', 240, 240, false ); // game
+	add_image_size( 'featured-game-retina', 480, 480, false ); // game retina
 	add_image_size( 'yarpp', 231, 100, true ); // yarpp image
 	add_image_size( 'yarpp-retina', 462, 200, true ); // yarpp image
 }

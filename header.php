@@ -60,7 +60,7 @@
 
 
         if ( get_post_type() == 'game' ) {
-            the_post_thumbnail( 'square-game' );
+            the_post_thumbnail( 'featured-game' );
         } else {
             the_post_thumbnail( 'twentyseventeen-featured-image' );
         }
