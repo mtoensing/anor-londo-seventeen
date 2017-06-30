@@ -50,6 +50,7 @@
 			the_title('<h2 class="entry-title"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>');
 		}
 		?>
+		<?php the_date('', '<p>', '</p>'); ?>
     </header><!-- .entry-header -->
 
     <div class="entry-content">
