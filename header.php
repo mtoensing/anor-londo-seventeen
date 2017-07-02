@@ -60,7 +60,7 @@
 
 
         if ( get_post_type() == 'game' ) {
-            the_post_thumbnail( 'featured-game' );
+            echo '<img width="240" src="' . get_the_post_thumbnail_url( "",'featured-game' ) .'" srcset="' . get_the_post_thumbnail_url( "",'featured-game' ) .' 1x, ' . get_the_post_thumbnail_url( "",'featured-game-retina' ) .' 2x">';
         } else {
             the_post_thumbnail( 'twentyseventeen-featured-image' );
         }

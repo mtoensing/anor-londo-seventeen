@@ -26,10 +26,9 @@ Author: Marc Tönsing
                         <a class="jp-relatedposts-post-a" href="<?php echo $permalink; ?>" title="<?php the_title_attribute(); ?>" rel="nofollow" >
                         <img class="unveil" data-src="<?php the_post_thumbnail_url( $size ); ?>" data-src-retina="<?php the_post_thumbnail_url( $size_retina ); ?>">
                         </a>
-                        <h4 class="jp-relatedposts-post-title">
+                        <h4 data-date="<?php the_date(); ?>" class="jp-relatedposts-post-title">
                             <a class="jp-relatedposts-post-a" href="<?php echo $permalink; ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
                         </h4>
-                        <p class="jp-relatedposts-post-date" style="display: block;"><?php the_date(); ?></p>
                     </div>
 
 					<?php $i++ ?>
