@@ -6,7 +6,7 @@
  Author:            MarcDK
  Author URI:        http://marc.tv
  Template:          twentyseventeen
- Version:           3.4
+ Version:           3.5
  License:           GNU General Public License v2 or later
  License URI:       http://www.gnu.org/licenses/gpl-2.0.html
  Tags:              light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
@@ -49,8 +49,8 @@ blockquote p {
 
 ul.nobullets,
 ol.nobullets {
-  margin-left: 0;
-  list-style: none;
+    margin-left: 0;
+    list-style: none;
 }
 
 @media screen and (min-width: 48em) {
@@ -149,24 +149,25 @@ ol.nobullets {
 }
 
 .cld-like-wrap a.cld-like-dislike-trigger:hover,
-.cld-dislike-wrap a.cld-like-dislike-trigger:hover{
+.cld-dislike-wrap a.cld-like-dislike-trigger:hover {
     color: #37609D;
 }
 
 .cld-like-wrap a.cld-like-dislike-trigger,
 .cld-dislike-wrap a.cld-like-dislike-trigger {
     color: #333;
-    outline : none;
+    outline: none;
 }
 
 .single-game .cld-like-wrap a.cld-like-dislike-trigger:hover,
-.single-game .cld-dislike-wrap a.cld-like-dislike-trigger:hover{
-    color: #0F8C4D;
+.single-game .cld-dislike-wrap a.cld-like-dislike-trigger:hover {
+    color: #333;
 }
 
 .single-game .cld-like-wrap a.cld-like-dislike-trigger,
 .single-game .cld-dislike-wrap a.cld-like-dislike-trigger {
-    color: #333;
+
+    color: #0F8C4D;
 }
 
 html span.on {
@@ -269,7 +270,6 @@ body.page:not(.twentyseventeen-front-page) .entry-title {
 }
 
 /* type game */
-
 
 .home .type-game .post-thumbnail,
 .archive .type-game .post-thumbnail {
@@ -414,7 +414,6 @@ html #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post a:active {
     box-shadow: none;
 }
 
-
 /* table */
 
 tfoot {
@@ -437,30 +436,29 @@ tfoot {
 .twentyseventeen-front-page.has-header-video .custom-header-media,
 .home.blog.has-header-image .custom-header-media,
 .home.blog.has-header-video .custom-header-media {
-  height: 200px;
-  height: 40vh;
-  max-height: 100%;
-  overflow: hidden;
+    height: 200px;
+    height: 40vh;
+    max-height: 100%;
+    overflow: hidden;
 }
 
 .admin-bar.twentyseventeen-front-page.has-header-image .custom-header-media,
 .admin-bar.twentyseventeen-front-page.has-header-video .custom-header-media,
 .admin-bar.home.blog.has-header-image .custom-header-media,
 .admin-bar.home.blog.has-header-video .custom-header-media {
-  height: calc(40vh - 32px);
+    height: calc(40vh - 32px);
 }
 
 .has-header-image.twentyseventeen-front-page .custom-header,
 .has-header-video.twentyseventeen-front-page .custom-header,
 .has-header-image.home.blog .custom-header,
 .has-header-video.home.blog .custom-header {
-        display: table;
-        height: 200px;
-        height: 40vh;
-        width: 100%;
+    display: table;
+    height: 200px;
+    height: 40vh;
+    width: 100%;
 
 }
-
 
 /* list platforms */
 
@@ -472,7 +470,7 @@ tfoot {
 }
 
 .page-template-listsystems .entry-content li .title {
-    margin:0;
+    margin: 0;
     padding: 0;
     font-size: 80%;
 }
