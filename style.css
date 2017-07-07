@@ -6,7 +6,7 @@
  Author:            MarcDK
  Author URI:        http://marc.tv
  Template:          twentyseventeen
- Version:           3.2
+ Version:           3.3
  License:           GNU General Public License v2 or later
  License URI:       http://www.gnu.org/licenses/gpl-2.0.html
  Tags:              light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
@@ -141,6 +141,32 @@ ol.nobullets {
 
 /* 21.0 Plugins */
 
+.js .marctv-moderate-links {
+    width: 200px;
+    float: right;
+    text-align: right;
+    margin-top: 2px;
+}
+
+.cld-like-wrap a.cld-like-dislike-trigger:hover,
+.cld-dislike-wrap a.cld-like-dislike-trigger:hover{
+    color: #37609D;
+}
+
+.cld-like-wrap a.cld-like-dislike-trigger,
+.cld-dislike-wrap a.cld-like-dislike-trigger {
+    color: #333;
+}
+
+.single-game .cld-like-wrap a.cld-like-dislike-trigger:hover,
+.single-game .cld-dislike-wrap a.cld-like-dislike-trigger:hover{
+    color: #0F8C4D;
+}
+
+.single-game .cld-like-wrap a.cld-like-dislike-trigger,
+.single-game .cld-dislike-wrap a.cld-like-dislike-trigger {
+    color: #333;
+}
 
 html span.on {
     font-style: italic;
