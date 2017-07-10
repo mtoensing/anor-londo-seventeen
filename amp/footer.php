@@ -6,7 +6,5 @@
         </p>
         <a href="#top" class="back-to-top"><?php _e( 'Back to top', 'amp' ); ?></a>
     </div>
-    <?php
-    echo get_PiwikPixel();
-    ?>
+    <?php echo get_PiwikPixel(); ?>
     </footer>
