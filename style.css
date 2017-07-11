@@ -474,3 +474,9 @@ tfoot {
     padding: 0;
     font-size: 80%;
 }
+
+@media screen and (max-width: 50em) {
+    html .page-template-listsystems .entry-content li {
+        width: 120px;
+    }
+}
