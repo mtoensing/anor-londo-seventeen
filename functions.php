@@ -190,7 +190,7 @@ function anorlondo_get_shortscore_table() {
 		$title          = get_the_title( $gid );
 		$score_count    = get_post_meta( $gid, "score_count", true );
 		//$developer_list = get_the_term_list( $gid, 'developer', '', ', ' );
-		$releasedate    = get_the_date( 'd.m. Y', $gid );
+		$releasedate    = get_the_date( 'd. m. Y', $gid );
 
 		$html .= '<tr>';
 		$html .= '<td>';
