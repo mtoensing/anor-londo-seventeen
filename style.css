@@ -498,3 +498,8 @@ tfoot {
         width: 120px;
     }
 }
+
+/* gravatar */
+.gravatar-notice {
+    font-size: 80%;
+}
