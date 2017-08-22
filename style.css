@@ -6,7 +6,7 @@
  Author:            MarcDK
  Author URI:        http://marc.tv
  Template:          twentyseventeen
- Version:           3.9
+ Version:           4.0
  License:           GNU General Public License v2 or later
  License URI:       http://www.gnu.org/licenses/gpl-2.0.html
  Tags:              light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
@@ -96,7 +96,8 @@ ol.nobullets {
 
 /* 14.0 Comments */
 
-html .comment-list .comment-reply-link {
+html .comment-list .comment-reply-link,
+#cancel-comment-reply-link {
     border: none;
     background-color: #ddd;
     padding: 0.4em 1em;
@@ -107,7 +108,9 @@ html .comment-list .comment-reply-link {
 }
 
 html .comment-list .comment-reply-link:hover,
-html .comment-list .comment-reply-link:active  {
+html .comment-list .comment-reply-link:active,
+#cancel-comment-reply-link:hover,
+#cancel-comment-reply-link:active {
   background-color: #767676;
   color: #fff;
   -webkit-box-shadow: none;
@@ -503,3 +506,25 @@ tfoot {
 .gravatar-notice {
     font-size: 80%;
 }
+
+/* cancel comment reply */
+
+#cancel-comment-reply-link {
+    font-size: 70%;
+    font-weight: 300;
+    float: right;
+    margin-top: 0;
+    display: inline;
+    text-decoration: none;
+    text-indent: -1000em;
+    width: 4em;
+}
+
+#cancel-comment-reply-link:after {
+     content: "\f335";
+     font-size: 200%;
+     font-family: dashicons;
+     text-indent: 0;
+     float:right;
+     line-height: 1;
+ }
