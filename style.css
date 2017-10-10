@@ -6,7 +6,7 @@
  Author:            MarcDK
  Author URI:        http://marc.tv
  Template:          twentyseventeen
- Version:           4.1
+ Version:           4.2
  License:           GNU General Public License v2 or later
  License URI:       http://www.gnu.org/licenses/gpl-2.0.html
  Tags:              light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
@@ -111,10 +111,10 @@ html .comment-list .comment-reply-link:hover,
 html .comment-list .comment-reply-link:active,
 #cancel-comment-reply-link:hover,
 #cancel-comment-reply-link:active {
-  background-color: #767676;
-  color: #fff;
-  -webkit-box-shadow: none;
-  box-shadow: none;
+    background-color: #767676;
+    color: #fff;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 .comment-content blockquote {
@@ -430,7 +430,6 @@ a[href*='/out/']:after {
     display: none;
 }
 
-
 /* Jetpack */
 
 html #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post a,
@@ -524,10 +523,22 @@ tfoot {
 }
 
 #cancel-comment-reply-link:after {
-     content: "\f335";
-     font-size: 200%;
-     font-family: dashicons;
-     text-indent: 0;
-     float:right;
-     line-height: 1;
- }
+    content: "\f335";
+    font-size: 200%;
+    font-family: dashicons;
+    text-indent: 0;
+    float: right;
+    line-height: 1;
+}
+
+/* warning */
+.entry-content .warning {
+    background-color: #c4e1ea;
+    padding: 0.3em 0.5em 0.6em;
+    border: 1px solid #89bccc;
+}
+
+/* play again */
+.shortscore-widget a {
+    font-size: 150%;
+}
