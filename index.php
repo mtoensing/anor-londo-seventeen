@@ -56,6 +56,10 @@ get_header(); ?>
 					'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentyseventeen' ) . ' </span>',
 				) );
 
+				echo '<div class="older-posts">';
+				 next_posts_link( __( 'Next page', 'twentyseventeen' ) . ' &raquo;', '' );
+				echo '</div>';
+
 			else :
 
 				get_template_part( 'template-parts/post/content', 'none' );
