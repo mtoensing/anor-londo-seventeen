@@ -57,7 +57,7 @@ get_header(); ?>
 				) );
 
 				echo '<div class="older-posts">';
-				 next_posts_link( __( 'Next page', 'twentyseventeen' ) . ' &raquo;', '' );
+                next_posts_link( __( 'Next page', 'twentyseventeen' ) . ' &raquo;', '' );
 				echo '</div>';
 
 			else :
