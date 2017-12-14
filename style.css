@@ -6,7 +6,7 @@
  Author:            MarcDK
  Author URI:        http://marc.tv
  Template:          twentyseventeen
- Version:           4.6.1
+ Version:           4.6.2
  License:           GNU General Public License v2 or later
  License URI:       http://www.gnu.org/licenses/gpl-2.0.html
  Tags:              light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
@@ -560,25 +560,4 @@ table th {
 html .prev.page-numbers,
 html .next.page-numbers {
     font-size: 2rem;
-}
-
-/* verified account */
-#comments .byuser .fn:after {
-    content: "\f147";
-    display: inline-block;
-    width: 21px;
-    height: 21px;
-    font-size: 20px;
-    line-height: 1;
-    font-family: dashicons;
-    text-decoration: inherit;
-    font-weight: 400;
-    font-style: normal;
-    vertical-align: top;
-    transition: color .1s ease-in 0;
-    -webkit-font-smoothing: antialiased;
-    background: #33609B;
-    margin-left: 5px;
-    color: white;
-    border-radius: 50%;
 }
