@@ -584,3 +584,8 @@ html .next.page-numbers {
 .logged-in-as {
     font-size: 80%;
 }
+
+/*custom html */
+.projects li {
+    margin-bottom: 1.5em;
+}
