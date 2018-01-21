@@ -235,21 +235,20 @@ function anorlondo_comments_popup_link( $zero = false, $one = false, $more = fal
 	$id = get_the_ID();
 	$title = get_the_title();
 	$number = get_comments_number( $id );
-	$sep = ' – ';
 
 	if ( false === $zero ) {
 		/* translators: %s: post title */
-		$zero = $sep . sprintf( __( 'No Comments<span class="screen-reader-text"> on %s</span>' ), $title );
+		$zero = sprintf( __( 'No Comments<span class="screen-reader-text"> on %s</span>' ), $title );
 	}
 
 	if ( false === $one ) {
 		/* translators: %s: post title */
-		$one = $sep . sprintf( __( '1 Comment<span class="screen-reader-text"> on %s</span>' ), $title );
+		$one = sprintf( __( '1 Comment<span class="screen-reader-text"> on %s</span>' ), $title );
 	}
 
 	if ( false === $more ) {
 		/* translators: 1: Number of comments 2: post title */
-		$more = $sep . _n( '%1$s Comment<span class="screen-reader-text"> on %2$s</span>', '%1$s Comments<span class="screen-reader-text"> on %2$s</span>', $number );
+		$more = _n( '%1$s Comment<span class="screen-reader-text"> on %2$s</span>', '%1$s Comments<span class="screen-reader-text"> on %2$s</span>', $number );
 		$more = sprintf( $more, number_format_i18n( $number ), $title );
 	}
 
@@ -268,7 +267,7 @@ function anorlondo_comments_popup_link( $zero = false, $one = false, $more = fal
 		return;
 	}
 
-	echo '<a href="';
+	echo ' – <a href="';
 	if ( 0 == $number ) {
 		$respond_link = get_permalink() . '#respond';
 		/**
