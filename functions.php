@@ -216,3 +216,90 @@ function anorlondo_get_shortscore_table() {
 
 	return $html;
 }
+
+/**
+ * Displays the link to the comments for the current post ID.
+ *
+ * @since 0.71
+ *
+ * @param string $zero      Optional. String to display when no comments. Default false.
+ * @param string $one       Optional. String to display when only one comment is available.
+ *                          Default false.
+ * @param string $more      Optional. String to display when there are more than one comment.
+ *                          Default false.
+ * @param string $css_class Optional. CSS class to use for comments. Default empty.
+ * @param string $none      Optional. String to display when comments have been turned off.
+ *                          Default false.
+ */
+function anorlondo_comments_popup_link( $zero = false, $one = false, $more = false, $css_class = '', $none = false ) {
+	$id = get_the_ID();
+	$title = get_the_title();
+	$number = get_comments_number( $id );
+	$sep = ' – ';
+
+	if ( false === $zero ) {
+		/* translators: %s: post title */
+		$zero = $sep . sprintf( __( 'No Comments<span class="screen-reader-text"> on %s</span>' ), $title );
+	}
+
+	if ( false === $one ) {
+		/* translators: %s: post title */
+		$one = $sep . sprintf( __( '1 Comment<span class="screen-reader-text"> on %s</span>' ), $title );
+	}
+
+	if ( false === $more ) {
+		/* translators: 1: Number of comments 2: post title */
+		$more = $sep . _n( '%1$s Comment<span class="screen-reader-text"> on %2$s</span>', '%1$s Comments<span class="screen-reader-text"> on %2$s</span>', $number );
+		$more = sprintf( $more, number_format_i18n( $number ), $title );
+	}
+
+	if ( false === $none ) {
+		/* translators: %s: post title */
+		$none = '';
+	}
+
+	if ( 0 == $number && !comments_open() && !pings_open() ) {
+		echo '<span' . ((!empty($css_class)) ? ' class="' . esc_attr( $css_class ) . '"' : '') . '>' . $none . '</span>';
+		return;
+	}
+
+	if ( post_password_required() ) {
+		_e( 'Enter your password to view comments.' );
+		return;
+	}
+
+	echo '<a href="';
+	if ( 0 == $number ) {
+		$respond_link = get_permalink() . '#respond';
+		/**
+		 * Filters the respond link when a post has no comments.
+		 *
+		 * @since 4.4.0
+		 *
+		 * @param string $respond_link The default response link.
+		 * @param integer $id The post ID.
+		 */
+		echo apply_filters( 'respond_link', $respond_link, $id );
+	} else {
+		comments_link();
+	}
+	echo '"';
+
+	if ( !empty( $css_class ) ) {
+		echo ' class="'.$css_class.'" ';
+	}
+
+	$attributes = '';
+	/**
+	 * Filters the comments link attributes for display.
+	 *
+	 * @since 2.5.0
+	 *
+	 * @param string $attributes The comments link attributes. Default empty.
+	 */
+	echo apply_filters( 'comments_popup_link_attributes', $attributes );
+
+	echo '>';
+	comments_number( $zero, $one, $more );
+	echo '</a>';
+}
