@@ -10,5 +10,5 @@
 
 ?>
 <div class="site-info">
-    <a href="/impressum/">Impressum</a>
+    <a href="<?php get_home_url(); ?>">Start</a> | <a href="/impressum/">Impressum</a>
 </div><!-- .site-info -->
