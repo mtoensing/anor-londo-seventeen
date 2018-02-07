@@ -6,7 +6,7 @@
  Author:            MarcDK
  Author URI:        http://marc.tv
  Template:          twentyseventeen
- Version:           5.5
+ Version:           5.6
  License:           GNU General Public License v2 or later
  License URI:       http://www.gnu.org/licenses/gpl-2.0.html
  Tags:              light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
@@ -150,7 +150,7 @@ html .comment-list .comment-reply-link:active,
 .comment-notes,
 .logged-in-as,
 .comment-notes a,
-.logged-in-as a{
+.logged-in-as a {
     color: #b9b9b9;
 }
 
@@ -160,7 +160,6 @@ html .comment-list .comment-reply-link:active,
     underline: 1px solid #000;
     color: #333;
 }
-
 
 .logged-in .logged-in-hidden {
     display: none;
@@ -434,18 +433,14 @@ a[href*='/out/']:after {
     text-decoration: none !important;
 }
 
-@media screen and (max-width: 50em) {
+html .type-game .shortscore-hreview .text,
+html .type-game .shortscore-hreview .rating,
+html .type-game .shortscore-hreview .link {
+    float: none;
+}
 
-    html .type-game .shortscore-hreview .text,
-    html .type-game .shortscore-hreview .rating,
-    html .type-game .shortscore-hreview .link {
-        float: none;
-    }
-
-    html .type-game .shortscore-hreview .link {
-        text-align: center;
-    }
-
+html .type-game .shortscore-hreview .link {
+    text-align: center;
 }
 
 .shortscore-title {
@@ -477,9 +472,6 @@ table th {
 .entry-content td {
     padding: 0.5em 0.25em;
 }
-
-
-
 
 /* hide author on home, archives and category pages */
 
