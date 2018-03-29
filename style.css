@@ -639,3 +639,7 @@ html .site-info {
 html .breadcrumb_last {
     color: #888;
 }
+
+.home #breadcrumbs {
+    display: none;
+}

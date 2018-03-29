@@ -33,8 +33,7 @@
 							) );
 						?>
 					</nav><!-- .social-navigation -->
-
-                <?php endif;
+				<?php endif;
 
 				get_template_part( 'template-parts/footer/site', 'info' );
 				?>
