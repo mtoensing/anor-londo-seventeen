@@ -33,7 +33,14 @@
 							) );
 						?>
 					</nav><!-- .social-navigation -->
-				<?php endif;
+
+					<?php
+					if ( function_exists('yoast_breadcrumb') ) {
+						yoast_breadcrumb('<div id="breadcrumbs">','</div>');
+					}
+					?>
+
+                <?php endif;
 
 				get_template_part( 'template-parts/footer/site', 'info' );
 				?>
