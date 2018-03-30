@@ -605,22 +605,6 @@ html .next.page-numbers {
     white-space: normal;
 }
 
-.shell-look {
-    padding: 5px;
-    list-style: none;
-    background: #141414;
-    color: #45D40C;
-    font: 0.8em 'Andale Mono', Consolas, 'Courier New';
-    line-height: 1.6em;
-    -webkit-border-bottom-right-radius: 3px;
-    -webkit-border-bottom-left-radius: 3px;
-    -moz-border-radius-bottomright: 3px;
-    -moz-border-radius-bottomleft: 3px;
-    border-bottom-right-radius: 3px;
-    border-bottom-left-radius: 3px;
-    white-space: normal;
-}
-
 .ptag-pixelated .single-featured-image-header img,
 .tag-pixelated .post-thumbnail img,
 .tag-pixelated .entry-content img {
@@ -631,10 +615,6 @@ html .next.page-numbers {
 }
 
 /* Breadcrumb styling */
-
-html .site-info {
-
-}
 
 html .breadcrumb_last {
     color: #888;
