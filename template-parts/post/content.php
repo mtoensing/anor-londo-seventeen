@@ -47,18 +47,23 @@
 			<a href="<?php the_permalink(); ?>">
 				<?php the_post_thumbnail('twentyseventeen-featured-image'); ?>
 			</a>
+
 		</div><!-- .post-thumbnail -->
 	<?php endif; ?>
 
 	<div class="entry-content">
 		<?php
-            /* translators: %s: Name of current post */
-            if (get_post_format() == "aside" || !is_home() && !is_archive()) {
-                the_content(sprintf(
-                    __('Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen'),
-                    get_the_title()
-                ));
-            }
+		        if ( has_excerpt() ) {
+			        echo '<a href="'. get_permalink($post->ID) . '">';
+		            the_excerpt();
+		            echo '</a>';
+
+			        /* translators: %s: Name of current post */
+			        echo '<a href="'. get_permalink($post->ID) . '">' . sprintf(
+					        __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen' ),
+					        get_the_title()
+				        ) . '</a>';
+		        }
 
             wp_link_pages(array(
                 'before'      => '<div class="page-links">' . __('Pages:', 'twentyseventeen'),
