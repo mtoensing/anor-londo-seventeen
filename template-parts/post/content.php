@@ -53,19 +53,20 @@
 
 	<div class="entry-content">
 		<?php
-		        if ( !is_single() AND has_excerpt() ) {
-			        echo '<a href="'. get_permalink($post->ID) . '">';
-		            the_excerpt();
-		            echo '</a>';
 
-			        /* translators: %s: Name of current post */
-			        echo '<a href="'. get_permalink($post->ID) . '">' . sprintf(
-					        __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen' ),
-					        get_the_title()
-				        ) . '</a>';
-		        } else {
+            /* show the exerpt only on hp and archive pages if the post has one. */
+            if ( !is_single() AND has_excerpt() ) {
+                echo '<a href="'. get_permalink($post->ID) . '">';
+                the_excerpt();
+                echo '</a>';
+
+                /* translators: %s: Name of current post */
+                echo '<a href="'. get_permalink($post->ID) . '">' . sprintf(
+                        __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen' ),
+                        get_the_title() ) . '</a>';
+            } else if( is_single() ) {
 		            the_content();
-                }
+            }
 
             wp_link_pages(array(
                 'before'      => '<div class="page-links">' . __('Pages:', 'twentyseventeen'),
