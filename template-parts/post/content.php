@@ -53,7 +53,7 @@
 
 	<div class="entry-content">
 		<?php
-		        if ( has_excerpt() ) {
+		        if ( !is_single() AND has_excerpt() ) {
 			        echo '<a href="'. get_permalink($post->ID) . '">';
 		            the_excerpt();
 		            echo '</a>';
@@ -63,7 +63,9 @@
 					        __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen' ),
 					        get_the_title()
 				        ) . '</a>';
-		        }
+		        } else {
+		            the_content();
+                }
 
             wp_link_pages(array(
                 'before'      => '<div class="page-links">' . __('Pages:', 'twentyseventeen'),
