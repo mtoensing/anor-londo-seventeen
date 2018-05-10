@@ -327,8 +327,13 @@ if ( ! function_exists( 'twentyseventeen_entry_footer' ) ) :
 				if ( ( $categories_list && twentyseventeen_categorized_blog() ) || $tags_list ) {
 					echo '<span class="cat-tags-links">';
 
-					// Make sure there's more than one category before displaying.
-					if ( $categories_list && twentyseventeen_categorized_blog() ) {
+
+					// YOAST Breadcrumbs
+					if ( function_exists('yoast_breadcrumb') ) {
+						yoast_breadcrumb('<span class="cat-links breadcrumb-links">' . twentyseventeen_get_svg( array( 'icon' => 'folder-open' ) ) . '<span class="screen-reader-text">' . __( 'Breadcrumbs', 'twentyseventeen' ) . '</span>','</span>');
+					} else if ( $categories_list && twentyseventeen_categorized_blog() ) {
+						// Not needed because if breadcrumbs are active
+						// Make sure there's more than one category before displaying.
 						echo '<span class="cat-links">' . twentyseventeen_get_svg( array( 'icon' => 'folder-open' ) ) . '<span class="screen-reader-text">' . __( 'Categories', 'twentyseventeen' ) . '</span>' . $categories_list . '</span>';
 					}
 
@@ -336,9 +341,7 @@ if ( ! function_exists( 'twentyseventeen_entry_footer' ) ) :
 						echo '<span class="tags-links">' . twentyseventeen_get_svg( array( 'icon' => 'hashtag' ) ) . '<span class="screen-reader-text">' . __( 'Tags', 'twentyseventeen' ) . '</span>' . $tags_list . '</span>';
 					}
 
-					if ( function_exists('yoast_breadcrumb') ) {
-						yoast_breadcrumb('<span class="cat-links breadcrumb-links">' . twentyseventeen_get_svg( array( 'icon' => 'bars' ) ) . '<span class="screen-reader-text">' . __( 'Breadcrumbs', 'twentyseventeen' ) . '</span>','</span>');
-					}
+
 
 					echo '</span>';
 				}
