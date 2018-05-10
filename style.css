@@ -6,7 +6,7 @@
  Author:            MarcDK
  Author URI:        http://marc.tv
  Template:          twentyseventeen
- Version:           6.9.1
+ Version:           6.9.2
  License:           GNU General Public License v2 or later
  License URI:       http://www.gnu.org/licenses/gpl-2.0.html
  Tags:              light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready, breadcrumbs
@@ -616,13 +616,11 @@ html .next.page-numbers {
 
 /* Breadcrumb styling */
 
+
 html .breadcrumb_last {
-    color: #888;
+    color: #b9b9b9;
 }
 
-.home #breadcrumbs {
-    display: none;
-}
 
 .entry-footer .cat-links,
 .entry-footer .tags-links
