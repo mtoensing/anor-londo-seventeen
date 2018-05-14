@@ -258,8 +258,14 @@ html span.on {
 }
 
 .socialbutton:hover::before {
-    transform: rotate(339deg);
+    transform: rotate(336deg);
     font-size: 68px;
+}
+
+.socialbutton:hover::before,
+.socialbutton.twitter:hover::before {
+    color: #fff;
+    text-decoration: none;
 }
 
 .socialbutton:hover span {
