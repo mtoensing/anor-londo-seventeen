@@ -121,9 +121,7 @@ add_action( 'widgets_init', 'anorlondo_widgets_init' );
 function anorlondo_get_shortscore_list() {
 
 	$args = array(
-		'post_type' => 'post',
-
-		'orderby'        => 'meta_value_num',
+		'post_type'      => 'post',
 		'orderby'        => array( 'meta_value_num' => 'DESC', 'date' => 'DESC' ),
 		'meta_key'       => '_shortscore_user_rating',
 		'posts_per_page' => '300',
@@ -137,7 +135,7 @@ function anorlondo_get_shortscore_list() {
 	while ( $the_query->have_posts() ) :
 		$the_query->the_post();
 		$result = anorlondo_object_to_array( get_post_meta( get_the_ID(), "_shortscore_result", true ) );
-		if ( isset( $result["game"]) AND isset( $result["game"]["title"] ) ) {
+		if ( isset( $result["game"] ) AND isset( $result["game"]["title"] ) ) {
 			$title = $result["game"]["title"];
 		}
 		$shortscore = get_post_meta( get_the_ID(), "_shortscore_user_rating", true );
@@ -149,9 +147,12 @@ function anorlondo_get_shortscore_list() {
 			$html .= '<h2>SHORTSCORE ' . $shortscore . '/10</h2>';
 			$html .= '<ul>';
 		}
-		$html .= '<li>';
-		$html .= '[' . $shortscore . '/10] - <a href="' . get_permalink() . '">' . $title . '</a>';
-		$html .= "</li> \n";
+
+		if ( $title != '' AND $shortscore != '' ) {
+			$html .= '<li>';
+			$html .= '[' . $shortscore . '/10] - <a href="' . get_permalink() . '">' . $title . '</a>';
+			$html .= "</li> \n";
+		}
 
 		$score = $shortscore;
 	endwhile;
