@@ -126,7 +126,7 @@ function anorlondo_get_shortscore_list() {
 		'orderby'        => 'meta_value_num',
 		'orderby'        => array( 'meta_value_num' => 'DESC', 'date' => 'DESC' ),
 		'meta_key'       => '_shortscore_user_rating',
-		'posts_per_page' => '200',
+		'posts_per_page' => '300',
 		'order'          => 'DESC'
 	);
 
@@ -136,8 +136,10 @@ function anorlondo_get_shortscore_list() {
 
 	while ( $the_query->have_posts() ) :
 		$the_query->the_post();
-		$result     = get_post_meta( get_the_ID(), "_shortscore_result", true );
-		$title      = $result->game->title;
+		$result = anorlondo_object_to_array( get_post_meta( get_the_ID(), "_shortscore_result", true ) );
+		if ( isset( $result["game"]) AND isset( $result["game"]["title"] ) ) {
+			$title = $result["game"]["title"];
+		}
 		$shortscore = get_post_meta( get_the_ID(), "_shortscore_user_rating", true );
 
 		if ( $score != $shortscore ) {
@@ -157,6 +159,14 @@ function anorlondo_get_shortscore_list() {
 	return $html;
 }
 
+
+function anorlondo_object_to_array( $d ) {
+	if ( is_object( $d ) ) {
+		$d = get_object_vars( $d );
+	}
+
+	return is_array( $d ) ? array_map( __FUNCTION__, $d ) : $d;
+}
 
 function anorlondo_get_shortscore_table() {
 
@@ -185,12 +195,12 @@ function anorlondo_get_shortscore_table() {
 
 	while ( $the_query->have_posts() ) :
 		$the_query->the_post();
-		$gid            = get_the_ID();
-		$shortscore     = get_post_meta( $gid, "score_value", true );
-		$title          = get_the_title( $gid );
-		$score_count    = get_post_meta( $gid, "score_count", true );
+		$gid         = get_the_ID();
+		$shortscore  = get_post_meta( $gid, "score_value", true );
+		$title       = get_the_title( $gid );
+		$score_count = get_post_meta( $gid, "score_count", true );
 		//$developer_list = get_the_term_list( $gid, 'developer', '', ', ' );
-		$releasedate    = get_the_date( 'd. m. Y', $gid );
+		$releasedate = get_the_date( 'd. m. Y', $gid );
 
 		$html .= '<tr>';
 		$html .= '<td>';
@@ -222,18 +232,18 @@ function anorlondo_get_shortscore_table() {
  *
  * @since 0.71
  *
- * @param string $zero      Optional. String to display when no comments. Default false.
- * @param string $one       Optional. String to display when only one comment is available.
+ * @param string $zero Optional. String to display when no comments. Default false.
+ * @param string $one Optional. String to display when only one comment is available.
  *                          Default false.
- * @param string $more      Optional. String to display when there are more than one comment.
+ * @param string $more Optional. String to display when there are more than one comment.
  *                          Default false.
  * @param string $css_class Optional. CSS class to use for comments. Default empty.
- * @param string $none      Optional. String to display when comments have been turned off.
+ * @param string $none Optional. String to display when comments have been turned off.
  *                          Default false.
  */
 function anorlondo_comments_popup_link( $zero = false, $one = false, $more = false, $css_class = '', $none = false ) {
-	$id = get_the_ID();
-	$title = get_the_title();
+	$id     = get_the_ID();
+	$title  = get_the_title();
 	$number = get_comments_number( $id );
 
 	if ( false === $zero ) {
@@ -257,13 +267,15 @@ function anorlondo_comments_popup_link( $zero = false, $one = false, $more = fal
 		$none = '';
 	}
 
-	if ( 0 == $number && !comments_open() && !pings_open() ) {
-		echo '<span' . ((!empty($css_class)) ? ' class="' . esc_attr( $css_class ) . '"' : '') . '>' . $none . '</span>';
+	if ( 0 == $number && ! comments_open() && ! pings_open() ) {
+		echo '<span' . ( ( ! empty( $css_class ) ) ? ' class="' . esc_attr( $css_class ) . '"' : '' ) . '>' . $none . '</span>';
+
 		return;
 	}
 
 	if ( post_password_required() ) {
 		_e( 'Enter your password to view comments.' );
+
 		return;
 	}
 
@@ -284,8 +296,8 @@ function anorlondo_comments_popup_link( $zero = false, $one = false, $more = fal
 	}
 	echo '"';
 
-	if ( !empty( $css_class ) ) {
-		echo ' class="'.$css_class.'" ';
+	if ( ! empty( $css_class ) ) {
+		echo ' class="' . $css_class . '" ';
 	}
 
 	$attributes = '';
@@ -329,8 +341,8 @@ if ( ! function_exists( 'twentyseventeen_entry_footer' ) ) :
 
 
 					// YOAST Breadcrumbs
-					if ( function_exists('yoast_breadcrumb') ) {
-						yoast_breadcrumb('<span class="cat-links breadcrumb-links">' . twentyseventeen_get_svg( array( 'icon' => 'folder-open' ) ) . '<span class="screen-reader-text">' . __( 'Breadcrumbs', 'twentyseventeen' ) . '</span>','</span>');
+					if ( function_exists( 'yoast_breadcrumb' ) ) {
+						yoast_breadcrumb( '<span class="cat-links breadcrumb-links">' . twentyseventeen_get_svg( array( 'icon' => 'folder-open' ) ) . '<span class="screen-reader-text">' . __( 'Breadcrumbs', 'twentyseventeen' ) . '</span>', '</span>' );
 					} else if ( $categories_list && twentyseventeen_categorized_blog() ) {
 						// Not needed because if breadcrumbs are active
 						// Make sure there's more than one category before displaying.
@@ -340,7 +352,6 @@ if ( ! function_exists( 'twentyseventeen_entry_footer' ) ) :
 					if ( $tags_list && ! is_wp_error( $tags_list ) ) {
 						echo '<span class="tags-links">' . twentyseventeen_get_svg( array( 'icon' => 'hashtag' ) ) . '<span class="screen-reader-text">' . __( 'Tags', 'twentyseventeen' ) . '</span>' . $tags_list . '</span>';
 					}
-
 
 
 					echo '</span>';
