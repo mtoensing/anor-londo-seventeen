@@ -105,6 +105,29 @@ html .comment-list .comment-reply-link,
     -webkit-box-shadow: none;
     -webkit-transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.3s ease-in-out;
     transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.3s ease-in-out;
+    color: #222;
+}
+
+html .colors-dark .comment-list .comment-reply-link,
+.colors-dark #cancel-comment-reply-link {
+    border: none;
+    background-color: #222;
+    padding: 0.4em 1em;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -webkit-transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.3s ease-in-out;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.3s ease-in-out;
+    color: #eeeeee;
+}
+
+html .colors-dark .comment-list .comment-reply-link:hover,
+html .colors-dark .comment-list .comment-reply-link:active,
+.colors-dark #cancel-comment-reply-link:hover,
+.color-dark #cancel-comment-reply-link:active {
+    background-color: #444;
+    color: #eeeeee;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 html .comment-list .comment-reply-link:hover,
@@ -117,10 +140,18 @@ html .comment-list .comment-reply-link:active,
     box-shadow: none;
 }
 
+
 .comment-content blockquote {
     font-size: 14px;
     font-size: 0.875rem;
     background: #eee;
+}
+
+.colors-dark .comment-content blockquote {
+    font-size: 14px;
+    font-size: 0.875rem;
+    background: #222;
+    color: #eee;
 }
 
 .comment-content a:focus, .comment-content a:hover {
