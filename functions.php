@@ -140,7 +140,7 @@ function anorlondo_get_shortscore_list() {
 		}
 		$shortscore = get_post_meta( get_the_ID(), "_shortscore_user_rating", true );
 
-		if ( $score != $shortscore ) {
+		if ( $score != $shortscore AND $shortscore > 0 ) {
 			if ( $score != '' ) {
 				$html .= "</ul> \n";
 			}
