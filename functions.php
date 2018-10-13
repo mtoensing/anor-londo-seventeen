@@ -134,9 +134,10 @@ function anorlondo_get_shortscore_list() {
 
 	while ( $the_query->have_posts() ) :
 		$the_query->the_post();
-		$result = anorlondo_object_to_array( get_post_meta( get_the_ID(), "_shortscore_result", true ) );
-		if ( isset( $result["game"] ) AND isset( $result["game"]["title"] ) ) {
-			$title = $result["game"]["title"];
+		$result =  get_post_meta( get_the_ID(), "_shortscore_result", true );
+		$result = json_decode(json_encode($result));
+		if ( isset( $result->game ) AND isset( $result->game->title ) ) {
+			$title =  $result->game->title;
 		}
 		$shortscore = get_post_meta( get_the_ID(), "_shortscore_user_rating", true );
 
@@ -160,14 +161,6 @@ function anorlondo_get_shortscore_list() {
 	return $html;
 }
 
-
-function anorlondo_object_to_array( $d ) {
-	if ( is_object( $d ) ) {
-		$d = get_object_vars( $d );
-	}
-
-	return is_array( $d ) ? array_map( __FUNCTION__, $d ) : $d;
-}
 
 function anorlondo_get_shortscore_table() {
 
