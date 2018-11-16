@@ -6,7 +6,7 @@
  Author:            MarcDK
  Author URI:        http://marc.tv
  Template:          twentyseventeen
- Version:           7.3
+ Version:           7.4
  License:           GNU General Public License v2 or later
  License URI:       http://www.gnu.org/licenses/gpl-2.0.html
  Tags:              light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready, breadcrumbs
@@ -293,9 +293,8 @@ html span.on {
     font-size: 68px;
 }
 
-.socialbutton:hover::before,
-.socialbutton.twitter:hover::before {
-    color: #fff;
+.socialbutton:hover::before {
+    color: #fff !important;
     text-decoration: none;
 }
 
@@ -311,6 +310,16 @@ html span.on {
 .socialbutton.twitter::before {
     content: "\f301";
     color: #0d85d2;
+}
+
+.socialbutton.yt {
+    background: #FF0004;
+    /* YT color */
+}
+
+.socialbutton.yt::before {
+    content: "\f236";
+    color: #f5a2a3;
 }
 
 .socialbutton::before {
@@ -682,4 +691,12 @@ html .entry-footer .breadcrumb-links {
 
 .comment-reply-link {
     white-space: nowrap;
+}
+
+
+/* teaser read more */
+
+.archive .entry-content p,
+.home .entry-content p {
+    margin: 0;
 }
