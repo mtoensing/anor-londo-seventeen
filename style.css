@@ -6,7 +6,7 @@
  Author:            MarcDK
  Author URI:        http://marc.tv
  Template:          twentyseventeen
- Version:           7.4
+ Version:           7.5
  License:           GNU General Public License v2 or later
  License URI:       http://www.gnu.org/licenses/gpl-2.0.html
  Tags:              light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready, breadcrumbs
@@ -640,19 +640,14 @@ html .next.page-numbers {
 
 /* shell */
 
+.wp-block-code code,
 .shell-look {
     padding: 5px;
     list-style: none;
     background: #141414;
     color: #45D40C;
-    font: 0.8em 'Andale Mono', Consolas, 'Courier New';
+    font-family: 'Andale Mono', Consolas, 'Courier New';
     line-height: 1.6em;
-    -webkit-border-bottom-right-radius: 3px;
-    -webkit-border-bottom-left-radius: 3px;
-    -moz-border-radius-bottomright: 3px;
-    -moz-border-radius-bottomleft: 3px;
-    border-bottom-right-radius: 3px;
-    border-bottom-left-radius: 3px;
     white-space: normal;
     margin-bottom: 2em;
 }
