@@ -632,6 +632,7 @@ html .next.page-numbers {
 /* shell */
 .wp-block-code {
   background-color: #141414 ! important;
+  padding: 0.3em ! important;
 }
 
 .wp-block-code code,
