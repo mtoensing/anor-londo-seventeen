@@ -33,15 +33,6 @@ blockquote {
     margin: 0 0 1.5em;
 }
 
-blockquote:after {
-    position: absolute;
-    top: -17px;
-    left: 0px;
-    content: "“";
-    font-family: serif;
-    font-size: 46px;
-}
-
 blockquote p {
     font-style: italic;
     margin: 0;
